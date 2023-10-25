@@ -19,11 +19,11 @@ RUN cd dpdk-23.07 && meson setup build && ninja -C build && ninja -C  build inst
 RUN export RTE_SDK=/root/dpdk-23.07
 RUN export PKTGEN=/root/Pktgen-DPDK
 RUN export RTE_TARGET=build
-RUN git clone https://github.com/pktgen/Pktgen-DPDK
+RUN git clone https://github.com/marezayeye/Pktgen-DPDK
 RUN export PKT_CONFIG_PATH=/root/dpdk-23.07/build/meson-private
 # RUN pacman -S dpdk
 RUN ldconfig
-RUN cd /root/Pktgen-DPDK && make
+RUN cd /root/Pktgen-DPDK && git checkout marezayeye && make
 
 
 # Defaults to a bash shell, you could put your DPDK-based application here.
