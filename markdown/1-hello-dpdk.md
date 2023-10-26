@@ -22,7 +22,7 @@ ninja -C  build install
 ```
 Add the following lines to the end of /etc/profile
 ```shell
-export RTE_SDK=/root/dpdk-23.07
+export RTE_SDK=~/dpdk-23.07
 export RTE_TARGET=build
 ```
 then,
